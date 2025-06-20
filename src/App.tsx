@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Mail, Phone, ExternalLink, Code, Briefcase, ChevronDown, Menu, X } from 'lucide-react';
+import { Github, Mail, Phone, ExternalLink, Briefcase, ChevronDown, Menu, X } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +43,7 @@ function App() {
       "company": "Teiú Indústria e Comércio LTDA",
       "period": " Junho 2025- o momento",
       "description": "Liderança técnica de equipe de desenvolvimento de software, atuando na definição de arquiteturas de sistemas, escolhas tecnológicas e boas práticas de engenharia. Responsável por soluções escaláveis e integradas, com foco em performance, manutenção e alinhamento com as necessidades do negócio.",
-      "skills": [ "Arquitetura de Software", "Liderança Técnica","TypeScript", "Tailwind CSS", "Laravel", "PHP", "SQL", "Git", "IIS Server", "MySQL"]
+      "skills": ["Arquitetura de Software", "Liderança Técnica", "TypeScript", "Tailwind CSS", "Laravel", "PHP", "SQL", "Git", "IIS Server", "MySQL"]
     },
 
     {
@@ -65,21 +65,24 @@ function App() {
   const projects = [
     {
       title: "Meteor Blaster",
-      description: "Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo. Interface moderna e responsiva.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/img/meteor_blaster.png"
+      description: "Um mini game divertido onde o jogador pilota uma nave para destruir meteoros e acumular pontos. Desenvolvido com foco em lógica de colisão e controle de movimentos.",
+      tech: ["React", "Node.js", "Typescript", "Tailwind CSS"],
+      image: "/img/meteor_blaster.png",
+      link: "https://seusite.com/meteor-blaster"
     },
     {
       title: "Task Management App",
       description: "Aplicativo de gerenciamento de tarefas com interface intuitiva e funcionalidades avançadas. Foco na produtividade e organização.",
       tech: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      link: "https://seusite.com/meteor-blaster"
     },
     {
       title: "Portfolio Website",
       description: "Website responsivo e moderno para apresentação de portfólio profissional. Design elegante e performance otimizada.",
       tech: ["React", "CSS3", "JavaScript", "Responsive Design"],
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      link: "https://seusite.com/meteor-blaster"
     }
   ];
 
@@ -290,29 +293,43 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-gray-800/40 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 hover:transform hover:scale-105 group">
+              <div
+                key={index}
+                className="bg-gray-800/40 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 hover:transform hover:scale-105 group"
+              >
                 <div className="h-48 bg-gradient-to-r from-purple-700/30 to-orange-600/30 flex items-center justify-center relative overflow-hidden">
-                  <Code size={48} className="text-orange-400 group-hover:text-orange-300 transition-colors duration-300 z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/15 to-orange-500/15 group-hover:scale-110 transition-transform duration-500"></div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover z-10 transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/15 to-orange-500/15"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-200 mb-4 leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-gray-800/60 rounded text-xs border border-orange-500/40 hover:border-orange-500/80 transition-colors duration-300">
+                      <span
+                        key={tech}
+                        className="px-2 py-1 bg-gray-800/60 rounded text-xs border border-orange-500/40 hover:border-orange-500/80 transition-colors duration-300"
+                      >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <button className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 transition-colors duration-300 group-hover:translate-x-1 transform transition-transform">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 transition-colors duration-300 group-hover:translate-x-1 transform transition-transform">
                     <ExternalLink size={16} />
                     <span>Ver Projeto</span>
-                  </button>
+                  </a>
+
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
