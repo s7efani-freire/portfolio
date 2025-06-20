@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Mail, Phone, ExternalLink, Code, Briefcase, User, ChevronDown, Menu, X } from 'lucide-react';
+import { Github, Mail, Phone, ExternalLink, Code, Briefcase, ChevronDown, Menu, X } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,28 +37,37 @@ function App() {
   };
 
   const experiences = [
+
+    {
+      "title": "Arquiteta de Soluções de TI / Tech Lead",
+      "company": "Teiú Indústria e Comércio LTDA",
+      "period": " Junho 2025- o momento",
+      "description": "Liderança técnica de equipe de desenvolvimento de software, atuando na definição de arquiteturas de sistemas, escolhas tecnológicas e boas práticas de engenharia. Responsável por soluções escaláveis e integradas, com foco em performance, manutenção e alinhamento com as necessidades do negócio.",
+      "skills": [ "Arquitetura de Software", "Liderança Técnica","TypeScript", "Tailwind CSS", "Laravel", "PHP", "SQL", "Git", "IIS Server", "MySQL"]
+    },
+
     {
       title: "Desenvolvedora Web",
       company: "Teiú Indústria e Comércio LTDA",
-      period: "2022 - o momento",
+      period: "Junho 2024 - Junho 2025",
       description: "Desenvolvimento de sistemas web utilizando tecnologias front-end, back-end, banco de dados e gerenciamento de servidores. Foco em criar soluções que fazem a diferença.",
-      skills: ['JavaScript','Boostrap', 'Laravel', 'PHP', 'SQL', 'Git','IIS Server','MySQL']
+      skills: ['JavaScript', 'Boostrap', 'Laravel', 'PHP', 'SQL', 'Git', 'IIS Server', 'MySQL']
     },
     {
       title: "Técnica de Eletrônica",
       company: "Teiú Indústria e Comércio LTDA",
-      period: "2022 - 2024",
-      description: "Desenvolvimento de projetos acadêmicos focados em tecnologias web e programação, sempre buscando aprender e evoluir.",
-      skills: ['Automação','Esp32', 'MicroPhyton', 'HTML5', 'CSS3', 'PHP', 'MicroPhyton', 'Ubuntu Server', 'MariaDB']
+      period: "Junho 2022 - Junho 2024",
+      description: "Desenvolvimento de sistemas voltados para automação e integração com hardware, incluindo criação de rotinas, apoio em sistemas embarcados e prototipagem de circuitos eletrônicos.",
+      skills: ['Automação', 'Esp32', 'MicroPhyton', 'HTML5', 'CSS3', 'PHP', 'Ubuntu Server', 'MariaDB']
     }
   ];
 
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "Meteor Blaster",
       description: "Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento e painel administrativo. Interface moderna e responsiva.",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "/img/meteor_blaster.png"
     },
     {
       title: "Task Management App",
@@ -166,9 +175,9 @@ function App() {
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-orange-400 bg-clip-text text-transparent">
               STÉFANI FREIRE
             </h1>
-            <p className="text-xl md:text-2xl text-orange-400 mb-4 font-medium">Desenvolvedora Web</p>
+            <p className="text-xl md:text-2xl text-orange-400 mb-4 font-medium">Tech Lead</p>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Na web, cada detalhe importa. Na carreira, cada passo conta.
+              Arquitetura de soluções de Tecnologia da Informação.
             </p>
           </div>
 
@@ -209,7 +218,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-200 leading-relaxed">
-                Sou desenvolvedora web dedicada a criar soluções que tornam o trabalho das pessoas mais fácil e eficiente. Atualmente, <span className="text-orange-400 font-semibold">lidero uma equipe de desenvolvimento de software </span> em uma indústria em Vitória da Conquista - BA, onde valorizo o esforço conjunto e a colaboração como pilares do sucesso. Acredito no aprendizado constante e acredito que toda pessoa tem algo a nos ensinar.
+                Sou Tech Lead, dedicada a criar soluções que tornam o trabalho das pessoas mais fácil e eficiente. Atualmente, <span className="text-orange-400 font-semibold">lidero uma equipe de desenvolvimento de software </span> em uma indústria em Vitória da Conquista - BA, onde valorizo o esforço conjunto e a colaboração como pilares do sucesso. Acredito no aprendizado constante e acredito que toda pessoa tem algo a nos ensinar.
               </p>
               <p className="text-lg text-gray-200 leading-relaxed">
                 Tenho experiência no planejamento, coordenação e desenvolvimento de projetos diversos, desde jogos para campanhas de marketing até sistemas robustos de monitoramento de produção com relatórios detalhados. Essa variedade de desafios me permitiu aprimorar minhas habilidades e adaptar <span className="text-orange-400 font-semibold">soluções para diferentes necessidades</span>, sempre com foco na eficiência e qualidade.
@@ -219,11 +228,6 @@ function App() {
                 "Acredito no crescimento contínuo e me empenho para ser, a cada dia, uma versão melhor de mim mesma do que fui ontem."
               </p>
               <div className="flex flex-wrap gap-3">
-                {['JavaScript', 'HTML5', 'CSS3', 'Boostrap', 'Laravel', 'PHP', 'SQL', 'MicroPhyton','Node.js', 'Git','IIS Server', 'Ubuntu Server','MySQL','MariaDB'].map((skill) => (
-                  <span key={skill} className="px-4 py-2 bg-gray-800/60 rounded-full text-sm font-medium border border-orange-500/40 hover:border-orange-500/80 transition-colors duration-300">
-                    {skill}
-                  </span>
-                ))}
               </div>
             </div>
             <div className="flex justify-center">
