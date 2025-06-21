@@ -71,7 +71,7 @@ function App() {
       link: "https://game-ship.vercel.app"
     },
     {
-      title: "Sistema de Gerenciamenton de Senhas de Vaquejada",
+      title: "Sistema de Gerenciamento de Senhas",
       description: "A descrever",
       tech: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
