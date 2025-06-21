@@ -16,7 +16,7 @@ function App() {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (scrollPosition >= offsetTop && scrollPosition <offsetTop + offsetHeight) {
             setActiveSection(section);
             break;
           }
@@ -68,11 +68,11 @@ function App() {
       description: "Um mini game divertido onde o jogador pilota uma nave para destruir meteoros e acumular pontos. Desenvolvido com foco em lógica de colisão e controle de movimentos.",
       tech: ["React", "Node.js", "Typescript", "Tailwind CSS"],
       image: "/img/meteor_blaster.png",
-      link: "https://seusite.com/meteor-blaster"
+      link: "https://game-ship.vercel.app"
     },
     {
-      title: "Task Management App",
-      description: "Aplicativo de gerenciamento de tarefas com interface intuitiva e funcionalidades avançadas. Foco na produtividade e organização.",
+      title: "Sistema de Gerenciamenton de Senhas de Vaquejada",
+      description: "A descrever",
       tech: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "https://seusite.com/meteor-blaster"
