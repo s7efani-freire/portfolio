@@ -71,10 +71,10 @@ function App() {
       link: "https://game-ship.vercel.app"
     },
     {
-      title: "Sistema de Gerenciamento de Senhas",
-      description: "A descrever",
-      tech: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      title: "Reserva Florestal",
+      description: "Site institucional desenvolvido com React + TypeScript, usando Vite e Tailwind CSS. Apresenta informações sobre eventos, horários, atrações e notícias da reserva, com um formulário de contato integrado e layout responsivo.",
+      tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      image: "/img/reserva_florestal.png",
       link: "https://seusite.com/meteor-blaster"
     },
     {
