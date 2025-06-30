@@ -75,14 +75,14 @@ function App() {
       description: "Site institucional desenvolvido com React + TypeScript, usando Vite e Tailwind CSS. Apresenta informações sobre eventos, horários, atrações e notícias da reserva, com um formulário de contato integrado e layout responsivo.",
       tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
       image: "/img/reserva_florestal.png",
-      link: "https://seusite.com/meteor-blaster"
+      link: "https://reserva-florestal.vercel.app"
     },
     {
       title: "Portfolio Website",
       description: "Website responsivo e moderno para apresentação de portfólio profissional. Design elegante e performance otimizada.",
       tech: ["React", "CSS3", "JavaScript", "Responsive Design"],
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "https://seusite.com/meteor-blaster"
+      link: "https://meteor-blaster"
     }
   ];
 
