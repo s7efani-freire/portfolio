@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Mail, Phone, ExternalLink, Briefcase, ChevronDown, Menu, X } from 'lucide-react';
+import { Github, Mail, Phone, ExternalLink, Briefcase, ChevronDown, Menu, X, Linkedin } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ function App() {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition <offsetTop + offsetHeight) {
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
             break;
           }
@@ -78,11 +78,11 @@ function App() {
       link: "https://reserva-florestal.vercel.app"
     },
     {
-      title: "Portfolio Website",
-      description: "Website responsivo e moderno para apresentação de portfólio profissional. Design elegante e performance otimizada.",
-      tech: ["React", "CSS3", "JavaScript", "Responsive Design"],
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "https://meteor-blaster"
+      title: "Portfólio - Engenheiro Eletricista",
+      description: "Website responsivo e moderno para apresentação de portfólio profissional de um Engenheiro Eletricista. Design profissional e performance otimizada.",
+      tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      image: "/img/portfolio-ac.png",
+      link: "https://anderson-csto.vercel.app"
     }
   ];
 
@@ -349,23 +349,29 @@ function App() {
               Vamos conversar sobre como posso ajudar a transformar suas ideias em realidade!
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(18rem, 1fr))' }}>
               <a href="tel:+5577999158332" className="bg-gray-800/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 hover:transform hover:scale-105 group">
                 <Phone size={32} className="mx-auto mb-4 text-orange-400 group-hover:text-orange-300 transition-colors duration-300 group-hover:scale-110 transform transition-transform" />
                 <h3 className="text-lg font-semibold mb-2">Telefone</h3>
-                <p className="text-gray-300">(77) 9 9915-8332</p>
+                <p className="text-gray-300 text-center">(77) 9 9915-8332</p>
               </a>
 
-              <a href="mailto:stefani7freire@gmail.com" className="bg-gray-800/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 hover:transform hover:scale-105 group">
+              <a href="mailto:stefani7freire@gmail.com" className="min-w-[14rem] bg-gray-800/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 hover:transform hover:scale-105 group">
                 <Mail size={32} className="mx-auto mb-4 text-orange-400 group-hover:text-orange-300 transition-colors duration-300 group-hover:scale-110 transform transition-transform" />
                 <h3 className="text-lg font-semibold mb-2">Email</h3>
-                <p className="text-gray-300 text-xs text-center">stefani7freire@gmail.com</p>
+                <p className="text-gray-300 text-center">stefani7freire@gmail.com</p>
               </a>
 
               <a href="https://github.com/s7efani-freire" target="_blank" rel="noopener noreferrer" className="bg-gray-800/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 hover:transform hover:scale-105 group">
                 <Github size={32} className="mx-auto mb-4 text-orange-400 group-hover:text-orange-300 transition-colors duration-300 group-hover:scale-110 transform transition-transform" />
                 <h3 className="text-lg font-semibold mb-2">GitHub</h3>
-                <p className="text-gray-300">s7efani-freire</p>
+                <p className="text-gray-300 text-center">s7efani-freire</p>
+              </a>
+
+              <a href="https://www.linkedin.com/in/stefani-freire/" target="_blank" rel="noopener noreferrer" className="bg-gray-800/40 backdrop-blur-sm rounded-xl p-6 border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 hover:transform hover:scale-105 group">
+                <Linkedin size={32} className="mx-auto mb-4 text-orange-400 group-hover:text-orange-300 transition-colors duration-300 group-hover:scale-110 transform transition-transform" />
+                <h3 className="text-lg font-semibold mb-2">Linkedin</h3>
+                <p className="text-gray-300 text-center">stefani-freire</p>
               </a>
             </div>
           </div>
