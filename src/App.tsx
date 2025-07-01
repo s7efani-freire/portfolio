@@ -197,6 +197,10 @@ function App() {
               <Github size={20} className="group-hover:scale-110 transition-transform duration-300" />
               <span>s7efani-freire</span>
             </a>
+            <a href="https://www.linkedin.com/in/stefani-freire/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors duration-300 group">
+              <Linkedin size={20} className="group-hover:scale-110 transition-transform duration-300" />
+              <span>stefani-freire</span>
+            </a>
           </div>
 
           <button
