@@ -39,9 +39,9 @@ function App() {
   const experiences = [
 
     {
-      "title": "Arquiteta de Soluções de TI / Tech Lead",
+      "title": "Arquiteta de Soluções de TI",
       "company": "Teiú Indústria e Comércio LTDA",
-      "period": " Junho 2025- o momento",
+      "period": "Julho 2025- o momento",
       "description": "Liderança técnica de equipe de desenvolvimento de software, atuando na definição de arquiteturas de sistemas, escolhas tecnológicas e boas práticas de engenharia. Responsável por soluções escaláveis e integradas, com foco em performance, manutenção e alinhamento com as necessidades do negócio.",
       "skills": ["Arquitetura de Software", "Liderança Técnica", "TypeScript", "Tailwind CSS", "Laravel", "PHP", "SQL", "Git", "IIS Server", "MySQL"]
     },
@@ -228,8 +228,8 @@ function App() {
                 Sou Tech Lead, dedicada a criar soluções que tornam o trabalho das pessoas mais fácil e eficiente. Atualmente, <span className="text-orange-400 font-semibold">lidero uma equipe de desenvolvimento de software </span> em uma indústria em Vitória da Conquista - BA, onde valorizo o esforço conjunto e a colaboração como pilares do sucesso. Acredito no aprendizado constante e acredito que toda pessoa tem algo a nos ensinar.
               </p>
               <p className="text-lg text-gray-200 leading-relaxed">
-                Tenho experiência no planejamento, coordenação e desenvolvimento de projetos diversos, desde jogos para campanhas de marketing até sistemas robustos de monitoramento de produção com relatórios detalhados. Essa variedade de desafios me permitiu aprimorar minhas habilidades e adaptar <span className="text-orange-400 font-semibold">soluções para diferentes necessidades</span>, sempre com foco na eficiência e qualidade.
-              </p>
+                Tenho experiência no planejamento, coordenação e desenvolvimento de projetos em diversos setores da empresa onde atuo, como marketing,              comercial, produção e qualidade. Essa diversidade de frentes me proporcionou uma visão ampla do negócio e fortaleceu minha capacidade de adaptar              <span className="text-orange-400 font-semibold">soluções sob medida para diferentes demandas</span>, sempre priorizando a eficiência e a            qualidade.
+              </p>    
 
               <p className="text-orange-400 font-medium italic">
                 "Acredito no crescimento contínuo e me empenho para ser, a cada dia, uma versão melhor de mim mesma do que fui ontem."
