@@ -47,10 +47,21 @@ export const strings = {
   projects: {
     heading: { pt: 'Projetos', en: 'Projects' },
     viewProject: { pt: 'Ver Projeto', en: 'View Project' },
+    viewRepo: { pt: 'Ver Repositório', en: 'View Repository' },
+    viewMore: { pt: 'Ver mais', en: 'See more' },
+    close: { pt: 'Fechar', en: 'Close' },
     types: {
       corporate: { pt: 'Corporativo', en: 'Corporate' },
       personal: { pt: 'Pessoal', en: 'Personal' },
       freelance: { pt: 'Freelancer', en: 'Freelance' },
+    },
+    confidentialCorporate: {
+      pt: 'Projeto corporativo interno. Código-fonte e link de acesso não são públicos por confidencialidade da empresa.',
+      en: 'Internal corporate project. Source code and access link are not public due to company confidentiality.',
+    },
+    confidentialFreelance: {
+      pt: 'Projeto realizado para cliente. Código-fonte e link de acesso não são públicos por acordo de confidencialidade.',
+      en: 'Project delivered for a client. Source code and access link are not public due to a confidentiality agreement.',
     },
   },
   contact: {

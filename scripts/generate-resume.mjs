@@ -12,6 +12,23 @@ const ACCENT = '#c2410c';
 const TEXT = '#1f2937';
 const MUTED = '#4b5563';
 
+const BIRTH_DATE = new Date(2003, 2, 15);
+
+function calculateAge(birthDate, today = new Date()) {
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const hasHadBirthdayThisYear =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+  if (!hasHadBirthdayThisYear) {
+    age--;
+  }
+
+  return age;
+}
+
+const age = calculateAge(BIRTH_DATE);
+
 const contact = {
   name: 'Stéfani Soares Freire',
   title: 'Tech Lead',
@@ -34,7 +51,6 @@ const headings = {
   experience: { pt: 'Experiência Profissional', en: 'Professional Experience' },
   education: { pt: 'Formação Acadêmica', en: 'Education' },
   skills: { pt: 'Stack & Competências', en: 'Stack & Skills' },
-  projects: { pt: 'Projeto em Destaque (Freelancer)', en: 'Featured Project (Freelance)' },
   skillsLabel: { pt: 'Habilidades: ', en: 'Skills: ' },
 };
 
@@ -49,8 +65,8 @@ const experiences = [
     company: 'Teiú Indústria e Comércio LTDA',
     period: { pt: 'Julho 2025 - o momento', en: 'July 2025 - present' },
     description: {
-      pt: 'Lidero uma equipe de 5 desenvolvedores (incluindo 1 QA), definindo arquiteturas de sistemas, escolhas tecnológicas e boas práticas de engenharia, incluindo code review, mentoria e padronização de APIs REST. Coordenei, desenvolvi e executei mais de 10 sistemas no último ano, incluindo um sistema de rastreabilidade integrado a ERP corporativo (Protheus) e uma plataforma de monitoramento industrial com sensores ESP32 e RFID, unindo integrações críticas, IoT e infraestrutura corporativa.',
-      en: 'I lead a team of 5 developers (including 1 QA), defining system architectures, technology choices, and engineering best practices, including code review, mentoring, and REST API standardization. I coordinated, developed, and delivered more than 10 systems in the last year, including a traceability system integrated with a corporate ERP (Protheus) and an industrial monitoring platform with ESP32 sensors and RFID, combining critical integrations, IoT, and corporate infrastructure.',
+      pt: 'Lidero uma equipe de 5 desenvolvedores (incluindo 1 QA), definindo arquiteturas de sistemas, escolhas tecnológicas e boas práticas de engenharia, incluindo code review, mentoria e padronização de APIs REST. Coordenei, desenvolvi e executei mais de 10 sistemas no último ano, incluindo um sistema de rastreabilidade integrado a ERP corporativo (Protheus) que reduziu em cerca de 60% o tempo de conferências e transferências, e uma plataforma de monitoramento industrial com sensores ESP32 e RFID.',
+      en: 'I lead a team of 5 developers (including 1 QA), defining system architectures, technology choices, and engineering best practices, including code review, mentoring, and REST API standardization. I coordinated, developed, and delivered more than 10 systems in the last year, including a traceability system integrated with a corporate ERP (Protheus) that cut manual conference and transfer time by about 60%, and an industrial monitoring platform with ESP32 and RFID sensors.',
     },
     skills: {
       pt: 'Arquitetura de Software, Liderança Técnica, Code Review, Mentoria, TypeScript, Tailwind CSS, Laravel, PHP, SQL, Git, IIS Server, MySQL',
@@ -108,8 +124,8 @@ const skillGroups = [
   {
     category: { pt: 'Desenvolvimento & ERP', en: 'Development & ERP' },
     items: {
-      pt: 'PHP, Laravel, Laravel Sanctum, TypeScript, JavaScript, React, React Router, TanStack Query, Node.js, Vite, Tailwind CSS, HTML5, CSS3, SQL, MySQL, MariaDB, SQLite, REST APIs, TOTVS/Protheus (integração)',
-      en: 'PHP, Laravel, Laravel Sanctum, TypeScript, JavaScript, React, React Router, TanStack Query, Node.js, Vite, Tailwind CSS, HTML5, CSS3, SQL, MySQL, MariaDB, SQLite, REST APIs, TOTVS/Protheus (integration)',
+      pt: 'PHP, Laravel, Laravel Sanctum, TypeScript, JavaScript, React, React Router, TanStack Query, Node.js, Vite, Tailwind CSS, SQL, MySQL, MariaDB, SQLite, REST APIs, TOTVS/Protheus (integração), WebSockets (tempo real), Filas/Jobs (Laravel Queues)',
+      en: 'PHP, Laravel, Laravel Sanctum, TypeScript, JavaScript, React, React Router, TanStack Query, Node.js, Vite, Tailwind CSS, SQL, MySQL, MariaDB, SQLite, REST APIs, TOTVS/Protheus (integration), WebSockets (real-time), Queues/Jobs (Laravel Queues)',
     },
   },
   {
@@ -125,7 +141,10 @@ const skillGroups = [
   },
   {
     category: { pt: 'Infraestrutura & Ferramentas', en: 'Infrastructure & Tools' },
-    items: { pt: 'Linux, Nginx, Apache, IIS Server, Ubuntu Server, Git, Insomnia, Figma', en: 'Linux, Nginx, Apache, IIS Server, Ubuntu Server, Git, Insomnia, Figma' },
+    items: {
+      pt: 'Linux, Nginx, Apache, IIS Server, Ubuntu Server, Git, GitHub Actions, Insomnia, Figma, Scripts de automação (Bash/PowerShell)',
+      en: 'Linux, Nginx, Apache, IIS Server, Ubuntu Server, Git, GitHub Actions, Insomnia, Figma, Automation scripting (Bash/PowerShell)',
+    },
   },
   {
     category: { pt: 'Metodologias', en: 'Methodologies' },
@@ -133,38 +152,32 @@ const skillGroups = [
   },
   {
     category: { pt: 'Idiomas', en: 'Languages' },
-    items: { pt: 'Português (nativo), Inglês (técnico)', en: 'Portuguese (native), Technical English' },
+    items: {
+      pt: 'Português (nativo), Inglês – Leitura e escrita de documentação técnica',
+      en: 'Portuguese (native), English – Reading/Writing for Technical Documentation',
+    },
   },
 ];
-
-const featuredProject = {
-  title: 'EcoFluid MES',
-  description: {
-    pt: 'Sistema MES (Manufacturing Execution System) para controle de produção em tempo real de uma fábrica de mangueiras de irrigação recicladas, cobrindo execução de ordens de produção, apontamentos, paradas e KPIs (OEE), com integração via OAuth2 ao ERP Bling.',
-    en: 'Manufacturing Execution System (MES) for real-time production control at a recycled irrigation-hose factory, covering production order execution, output logging, downtime, and OEE KPIs, with OAuth2 integration to the Bling ERP.',
-  },
-  tech: 'React, TypeScript, Vite, React Router, Tailwind CSS, TanStack Query, Laravel, Laravel Sanctum, SQLite, MySQL, OAuth2',
-};
 
 function tr(localized) {
   return localized[lang];
 }
 
-const doc = new PDFDocument({ size: 'A4', margins: { top: 45, bottom: 45, left: 50, right: 50 } });
+const doc = new PDFDocument({ size: 'A4', margins: { top: 26, bottom: 26, left: 50, right: 50 } });
 doc.pipe(fs.createWriteStream(outputPath));
 
 function sectionHeading(localizedText) {
-  doc.moveDown(0.75);
+  doc.moveDown(0.55);
   doc.fillColor(ACCENT).font('Helvetica-Bold').fontSize(12).text(tr(localizedText).toUpperCase(), { characterSpacing: 1 });
   const y = doc.y + 2;
   doc.moveTo(50, y).lineTo(545, y).strokeColor(ACCENT).lineWidth(1).stroke();
-  doc.moveDown(0.7);
+  doc.moveDown(0.5);
   doc.fillColor(TEXT);
 }
 
 // Header
 doc.fillColor(TEXT).font('Helvetica-Bold').fontSize(24).text(contact.name);
-doc.font('Helvetica').fontSize(13).fillColor(ACCENT).text(contact.title);
+doc.font('Helvetica').fontSize(13).fillColor(ACCENT).text(`${contact.title} • ${age} ${lang === 'pt' ? 'anos' : 'years old'}`);
 doc.moveDown(0.4);
 
 doc.fontSize(9.5);
@@ -182,7 +195,7 @@ doc.fillColor(TEXT);
 
 // Summary
 sectionHeading(headings.summary);
-doc.font('Helvetica').fontSize(10.5).fillColor(TEXT).text(tr(summary), { align: 'justify', lineGap: 3 });
+doc.font('Helvetica').fontSize(10.5).fillColor(TEXT).text(tr(summary), { align: 'justify', lineGap: 1.5 });
 
 // Experience
 sectionHeading(headings.experience);
@@ -191,21 +204,12 @@ experiences.forEach((exp, index) => {
   doc.font('Helvetica').fontSize(10).fillColor(MUTED).text(` - ${exp.company}`);
   doc.font('Helvetica-Oblique').fontSize(9.5).fillColor(MUTED).text(tr(exp.period));
   doc.moveDown(0.4);
-  doc.font('Helvetica').fontSize(10).fillColor(TEXT).text(tr(exp.description), { align: 'justify', lineGap: 3 });
+  doc.font('Helvetica').fontSize(10).fillColor(TEXT).text(tr(exp.description), { align: 'justify', lineGap: 1.5 });
   doc.moveDown(0.4);
   doc.font('Helvetica-Bold').fontSize(9).fillColor(MUTED).text(tr(headings.skillsLabel), { continued: true });
   doc.font('Helvetica').fontSize(9).fillColor(MUTED).text(tr(exp.skills));
-  if (index < experiences.length - 1) doc.moveDown(0.85);
+  if (index < experiences.length - 1) doc.moveDown(0.5);
 });
-
-// Featured freelance project
-sectionHeading(headings.projects);
-doc.font('Helvetica-Bold').fontSize(10.5).fillColor(TEXT).text(featuredProject.title);
-doc.moveDown(0.2);
-doc.font('Helvetica').fontSize(10).fillColor(TEXT).text(tr(featuredProject.description), { align: 'justify', lineGap: 3 });
-doc.moveDown(0.3);
-doc.font('Helvetica-Bold').fontSize(9).fillColor(MUTED).text(tr(headings.skillsLabel), { continued: true });
-doc.font('Helvetica').fontSize(9).fillColor(MUTED).text(featuredProject.tech);
 
 // Education
 sectionHeading(headings.education);
@@ -213,7 +217,7 @@ education.forEach((item, index) => {
   doc.font('Helvetica-Bold').fontSize(10.5).fillColor(TEXT).text(tr(item.course), { continued: true });
   doc.font('Helvetica').fontSize(10).fillColor(MUTED).text(` - ${item.institution}`);
   doc.font('Helvetica-Oblique').fontSize(9.5).fillColor(MUTED).text(tr(item.status));
-  if (index < education.length - 1) doc.moveDown(0.7);
+  if (index < education.length - 1) doc.moveDown(0.35);
 });
 
 // Skills
@@ -221,7 +225,7 @@ sectionHeading(headings.skills);
 skillGroups.forEach((group, index) => {
   doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT).text(`${tr(group.category)}: `, { continued: true });
   doc.font('Helvetica').fontSize(10).fillColor(MUTED).text(tr(group.items), { lineGap: 2 });
-  if (index < skillGroups.length - 1) doc.moveDown(0.5);
+  if (index < skillGroups.length - 1) doc.moveDown(0.12);
 });
 
 doc.end();

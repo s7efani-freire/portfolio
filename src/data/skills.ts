@@ -33,14 +33,14 @@ export const skillCategories: SkillCategory[] = [
       item('Node.js', 'Node.js'),
       item('Vite', 'Vite'),
       item('Tailwind CSS', 'Tailwind CSS'),
-      item('HTML5', 'HTML5'),
-      item('CSS3', 'CSS3'),
       item('SQL', 'SQL'),
       item('MySQL', 'MySQL'),
       item('MariaDB', 'MariaDB'),
       item('SQLite', 'SQLite'),
       item('REST APIs', 'REST APIs'),
       item('TOTVS/Protheus (integração)', 'TOTVS/Protheus (integration)'),
+      item('WebSockets (tempo real)', 'WebSockets (real-time)'),
+      item('Filas/Jobs (Laravel Queues)', 'Queues/Jobs (Laravel Queues)'),
     ],
   },
   {
@@ -67,8 +67,10 @@ export const skillCategories: SkillCategory[] = [
       item('IIS Server', 'IIS Server'),
       item('Ubuntu Server', 'Ubuntu Server'),
       item('Git', 'Git'),
+      item('GitHub Actions', 'GitHub Actions'),
       item('Insomnia', 'Insomnia'),
       item('Figma', 'Figma'),
+      item('Scripts de automação (Bash/PowerShell)', 'Automation scripting (Bash/PowerShell)'),
     ],
   },
   {
@@ -77,6 +79,9 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: { pt: 'Idiomas', en: 'Languages' },
-    items: [item('Português (nativo)', 'Portuguese (native)'), item('Inglês técnico', 'Technical English')],
+    items: [
+      item('Português (nativo)', 'Portuguese (native)'),
+      item('Inglês – Leitura e escrita de documentação técnica', 'English – Reading/Writing for Technical Documentation'),
+    ],
   },
 ];
