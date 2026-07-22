@@ -7,4 +7,6 @@ export const CONTACT = {
   githubUrl: 'https://github.com/s7efani-freire',
   linkedinHandle: 'stefani-freire',
   linkedinUrl: 'https://www.linkedin.com/in/stefani-freire/',
+  instagramHandle: 'dev.stefani',
+  instagramUrl: 'https://www.instagram.com/dev.stefani/',
 };

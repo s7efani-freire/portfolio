@@ -1,4 +1,4 @@
-import { ChevronDown, Download, Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { ChevronDown, Download, Github, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { CONTACT } from '../constants/contact';
 import { BIRTH_DATE, calculateAge } from '../utils/age';
 import { useTranslate } from '../i18n/LanguageContext';
@@ -28,7 +28,7 @@ function Hero({ onNavigate }: HeroProps) {
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-loose">{tr(strings.hero.subtitle)}</p>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12">
+        <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 mb-12">
           <a href={CONTACT.phoneHref} className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors duration-300 group">
             <Phone size={20} className="group-hover:scale-110 transition-transform duration-300" />
             <span>{CONTACT.phoneDisplay}</span>
@@ -44,6 +44,10 @@ function Hero({ onNavigate }: HeroProps) {
           <a href={CONTACT.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors duration-300 group">
             <Linkedin size={20} className="group-hover:scale-110 transition-transform duration-300" />
             <span>{CONTACT.linkedinHandle}</span>
+          </a>
+          <a href={CONTACT.instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors duration-300 group">
+            <Instagram size={20} className="group-hover:scale-110 transition-transform duration-300" />
+            <span>{CONTACT.instagramHandle}</span>
           </a>
         </div>
 
