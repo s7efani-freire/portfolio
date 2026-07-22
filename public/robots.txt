@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-z8v7.vercel.app/sitemap.xml
+Sitemap: https://stefanifreire.vercel.app/sitemap.xml
