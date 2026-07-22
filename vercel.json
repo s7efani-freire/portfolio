@@ -1,0 +1,16 @@
+{
+  "headers": [
+    {
+      "source": "/resume.pdf",
+      "headers": [
+        { "key": "Content-Disposition", "value": "attachment; filename=\"Curriculo - Stefani Soares Freire.pdf\"" }
+      ]
+    },
+    {
+      "source": "/resume-en.pdf",
+      "headers": [
+        { "key": "Content-Disposition", "value": "attachment; filename=\"Resume - Stefani Soares Freire.pdf\"" }
+      ]
+    }
+  ]
+}
