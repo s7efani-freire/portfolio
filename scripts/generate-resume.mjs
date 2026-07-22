@@ -82,7 +82,7 @@ const experiences = [
 const education = [
   {
     course: { pt: 'Engenharia de Software', en: 'Software Engineering' },
-    institution: 'Anhanguera',
+    institution: 'Faculdade Anhanguera',
     status: { pt: 'Cursando (conclusão prevista para 2028)', en: 'Ongoing (expected completion in 2028)' },
   },
   {
