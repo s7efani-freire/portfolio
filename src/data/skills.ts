@@ -82,6 +82,7 @@ export const skillCategories: SkillCategory[] = [
     items: [
       item('Português (nativo)', 'Portuguese (native)'),
       item('Inglês – Leitura e escrita de documentação técnica', 'English – Reading/Writing for Technical Documentation'),
+      item('Espanhol (intermediário)', 'Spanish (intermediate)'),
     ],
   },
 ];

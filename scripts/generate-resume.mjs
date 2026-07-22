@@ -153,8 +153,8 @@ const skillGroups = [
   {
     category: { pt: 'Idiomas', en: 'Languages' },
     items: {
-      pt: 'Português (nativo), Inglês – Leitura e escrita de documentação técnica',
-      en: 'Portuguese (native), English – Reading/Writing for Technical Documentation',
+      pt: 'Português (nativo), Inglês – Leitura e escrita de documentação técnica, Espanhol (intermediário)',
+      en: 'Portuguese (native), English – Reading/Writing for Technical Documentation, Spanish (intermediate)',
     },
   },
 ];
