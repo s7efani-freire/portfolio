@@ -47,6 +47,9 @@ export const projects: Project[] = [
     },
     tech: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Groq API (Whisper)', 'Groq API (LLaMA 3.3)', 'SQLite'],
     type: 'personal',
+    image: '/img/scriva.png',
+    imageWidth: 1901,
+    imageHeight: 857,
     githubUrl: 'https://github.com/s7efani-freire/scriva',
   },
   {
