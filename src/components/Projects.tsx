@@ -1,8 +1,9 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Cpu, ExternalLink } from 'lucide-react';
-import { projects } from '../data/projects';
+import { Project, projects } from '../data/projects';
 import { useLanguage, useTranslate } from '../i18n/LanguageContext';
 import { strings } from '../i18n/strings';
+import ProjectModal from './ProjectModal';
 
 const TYPE_BADGE_STYLES: Record<string, string> = {
   corporate: 'border-purple-500/40 text-purple-300',
@@ -14,6 +15,7 @@ function Projects() {
   const { language } = useLanguage();
   const tr = useTranslate();
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const scrollByCard = (direction: 1 | -1) => {
     const scroller = scrollerRef.current;
@@ -42,7 +44,8 @@ function Projects() {
               <div
                 key={tr(project.title)}
                 data-project-card
-                className="snap-start flex-shrink-0 w-[300px] sm:w-[340px] flex flex-col bg-gray-800/40 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 group"
+                onClick={() => setSelectedProject(project)}
+                className="snap-start flex-shrink-0 w-[300px] sm:w-[340px] flex flex-col bg-gray-800/40 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-700/40 hover:border-orange-500/60 transition-all duration-300 group cursor-pointer"
               >
                 {project.image ? (
                   <div className="h-48 flex-shrink-0 bg-gradient-to-r from-purple-700/30 to-orange-600/30 flex items-center justify-center relative overflow-hidden">
@@ -82,17 +85,29 @@ function Projects() {
                         </span>
                       ))}
                     </div>
-                    {project.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 transition-colors duration-300 group-hover:translate-x-1 transform transition-transform"
+                    <div className="flex items-center justify-between">
+                      <button
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          setSelectedProject(project);
+                        }}
+                        className="text-sm text-gray-300 hover:text-orange-400 transition-colors duration-300 underline underline-offset-2"
                       >
-                        <ExternalLink size={16} />
-                        <span>{tr(strings.projects.viewProject)}</span>
-                      </a>
-                    )}
+                        {tr(strings.projects.viewMore)}
+                      </button>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(event) => event.stopPropagation()}
+                          className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 transition-colors duration-300 group-hover:translate-x-1 transform transition-transform"
+                        >
+                          <ExternalLink size={16} />
+                          <span>{tr(strings.projects.viewProject)}</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -115,6 +130,8 @@ function Projects() {
           </button>
         </div>
       </div>
+
+      {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
     </section>
   );
 }
