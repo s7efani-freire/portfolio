@@ -32,11 +32,15 @@ export const projects: Project[] = [
   {
     title: { pt: 'Sistema de Gestão de Condomínios', en: 'Condominium Management System' },
     description: {
-      pt: 'Sistema de gestão de condomínios com backend em PHP puro (servidor embutido do PHP, sem Apache) e frontend em React (Vite), cobrindo cadastro de condomínios, unidades e moradores.',
-      en: "Condominium management system with a plain PHP backend (PHP's built-in server, no Apache) and a React (Vite) frontend, covering condominiums, units, and residents.",
+      pt: 'Sistema para escritórios de advocacia gerenciarem ações judiciais e extrajudiciais relacionadas a condomínios, com backend em Laravel e frontend em React (Vite). A versão de demonstração publicada é apenas o frontend; o backend completo está disponível no repositório, na branch main.',
+      en: 'System for law firms to manage judicial and extrajudicial legal actions related to condominiums, with a Laravel backend and a React (Vite) frontend. The published demo is frontend-only; the full backend is available in the repository, on the main branch.',
     },
-    tech: ['PHP', 'React', 'Vite', 'MySQL'],
+    tech: ['PHP', 'Laravel', 'React', 'Vite', 'MySQL'],
     type: 'personal',
+    image: '/img/condominios.png',
+    imageWidth: 1896,
+    imageHeight: 888,
+    link: 'https://legal-management-system-gamma.vercel.app',
     githubUrl: 'https://github.com/s7efani-freire/legal-management-system',
   },
   {
@@ -55,14 +59,15 @@ export const projects: Project[] = [
   {
     title: { pt: 'EcoFluid MES', en: 'EcoFluid MES' },
     description: {
-      pt: 'Sistema MES (Manufacturing Execution System) desenvolvido como freelancer para uma fábrica de mangueiras de irrigação recicladas e resinas PEAD/PEBD. Controla execução de ordens de produção, apontamentos, paradas e KPIs (OEE) em tempo real, com integração via OAuth2 ao ERP Bling.',
-      en: 'Manufacturing Execution System (MES) built as a freelancer for a recycled irrigation-hose and PEAD/PEBD resin manufacturer. Controls real-time production order execution, output logging, downtime, and OEE KPIs, with OAuth2 integration to the Bling ERP.',
+      pt: 'Sistema MES (Manufacturing Execution System) desenvolvido como freelancer para uma fábrica de mangueiras de irrigação recicladas e resinas PEAD/PEBD. Controla execução de ordens de produção, apontamentos, paradas e KPIs (OEE) em tempo real, com integração via OAuth2 ao ERP Bling. A versão de demonstração publicada é apenas o frontend; o backend completo está disponível no repositório, na branch main.',
+      en: 'Manufacturing Execution System (MES) built as a freelancer for a recycled irrigation-hose and PEAD/PEBD resin manufacturer. Controls real-time production order execution, output logging, downtime, and OEE KPIs, with OAuth2 integration to the Bling ERP. The published demo is frontend-only; the full backend is available in the repository, on the main branch.',
     },
     tech: ['React', 'TypeScript', 'Vite', 'React Router', 'Tailwind CSS', 'TanStack Query', 'Laravel', 'Laravel Sanctum', 'SQLite', 'MySQL', 'OAuth2'],
     type: 'freelance',
     image: '/img/mesecofluid.png',
     imageWidth: 1888,
     imageHeight: 858,
+    link: 'https://mes-ecofluid.vercel.app',
     githubUrl: 'https://github.com/s7efani-freire/mes-ecofluid',
   },
   {
