@@ -44,6 +44,20 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/s7efani-freire/legal-management-system',
   },
   {
+    title: { pt: 'Meteor Blaster', en: 'Meteor Blaster' },
+    description: {
+      pt: 'Shooter espacial simples feito em React, onde você pilota uma nave, desvia de meteoros e atira neles para fazer pontos. É uma homenagem/versão livre de um jogo que eu jogava muito na infância, sem grandes ambições técnicas: puramente nostalgia e valor emocional, uma forma de recriar a sensação de sentar e jogar aquele clássico de nave x meteoros. O objetivo é destruir meteoros para ganhar pontos e sobreviver o máximo possível; encostar em um meteoro encerra a partida, e o recorde (high score) fica salvo no navegador.',
+      en: "Simple space shooter built in React, where you pilot a ship, dodge meteors, and shoot them for points. It's a tribute/free version of a game I played a lot as a kid, with no big technical ambitions: pure nostalgia and emotional value, a way to recreate the feeling of sitting down to play that classic ship-vs-meteors game. The goal is to destroy meteors to score points and survive as long as possible; touching a meteor ends the run, and the high score is saved in the browser.",
+    },
+    tech: ['React', 'TypeScript', 'Vite'],
+    type: 'personal',
+    image: '/img/meteor.png',
+    imageWidth: 1912,
+    imageHeight: 899,
+    link: 'https://game-ship.vercel.app/',
+    githubUrl: 'https://github.com/s7efani-freire/game-ship',
+  },
+  {
     title: { pt: 'Scriva', en: 'Scriva' },
     description: {
       pt: 'Aplicação web que grava reuniões pelo navegador, transcreve o áudio com Whisper (Groq) e gera automaticamente uma ATA estruturada com LLaMA 3.3, rodando de forma local e gratuita.',
